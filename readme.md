@@ -9,10 +9,10 @@ A STM32F072 development board is used for this project.
 Pinout:
 
 * PA1: ADC_In1
-* PA4: SPI_Nss
-* PA5: SPI1_Sck
-* PA7: SPI1_Mosi
+* PB12: SPI_Nss
+* PB13: SPI2_Sck
+* PB15: SPI2_Mosi
 
 ## Firmware Description
 
-The SysTick interrupt triggers every 1ms and calls a single function to read the ADC and then output that value over SPI1.
+The main function initializes the ADC, GPIO, and SPI peripherals and then repeatedly sends a SPI command containing the ADC reading over the SPI output.
